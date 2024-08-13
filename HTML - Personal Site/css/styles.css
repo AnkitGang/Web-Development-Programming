@@ -1,0 +1,45 @@
+.left {
+    float: left;
+    background-color: gray;
+}
+
+.mid {
+    float: left;
+    background-color: aqua;
+}
+
+.right {
+    float: right;
+    background-color: blue;
+}
+
+div {
+    padding: 5px 50px 5px 5px;
+    color: white;
+    background-color: rgb(212, 43, 43);
+    border: solid black;
+}
+
+body {
+  background-color: #f0fff0;
+}
+
+hr {
+  height : 6px;
+}
+
+img:hover {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  border-radius: 100%;
+  cursor: help;
+}
+
+h1 {
+  color: #66BFFB;
+}
+
+h3 {
+  color : #66BFBF;
+}

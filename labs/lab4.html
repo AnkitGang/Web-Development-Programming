@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; background-color:rgba(18, 32, 137, 0.379);">
+           <h1 style="font-size:50px;color:rgb(54, 112, 92);">Employee details</h1>
+           <hr>
+
+            <p id="name"></p>
+            <p id ="dob"></p>
+            <p id ="empid"></p>
+            <p id ="type"></p>
+
+            <hr>
+            <p id="name1"></p>
+            <p id ="dob1"></p>
+            <p id ="empid1"></p>
+            <p id ="type1"></p>
+
+            <hr>
+            <p id="name2"></p>
+            <p id ="dob2"></p>
+            <p id="empid2"></p>
+            <p id ="type2"></p>
+
+            <hr>
+             <h2>Average Salary of Developer's: </h2>
+             <p id="avg"></p>
+
+         <script>
+            var empadmin={
+               name: "Aman",
+               dob: "31-1-1994",
+               empid: 1343,
+               type: "Admin"
+
+            }
+
+            var empdev={
+                name: "Ankit",
+               dob: "7-5-1996",
+               empid: 1542,
+               type: "Developer",
+               salary: 150000
+            }
+
+            var empdev1={
+                name: "Kshitiz",
+                dob: "26-10-1995",
+                empid: 1525,
+                type: "Developer",
+                salary: 140000
+            }
+
+            document.getElementById("name").innerText="NAME: " +empadmin.name;
+            document.getElementById("dob").innerText="DOB: " +empadmin.dob;
+            document.getElementById("empid").innerText="empid: " +empadmin.empid;
+            document.getElementById("type").innerText="Type: " +empadmin.type;
+
+            document.getElementById("name1").innerText="NAME: " +empdev.name;
+            document.getElementById("dob1").innerText="DOB: " +empdev.dob;
+            document.getElementById("empid1").innerText="empid: " +empdev.empid;
+            document.getElementById("type1").innerText="Type: " +empdev.type;
+
+            document.getElementById("name2").innerText="NAME: " +empdev1.name;
+            document.getElementById("dob2").innerText="DOB: " +empdev1.dob;
+            document.getElementById("empid2").innerText="empid: " +empdev1.empid;
+            document.getElementById("type2").innerText="Type: " +empdev1.type;
+
+            var avg = (empdev.salary+empdev1.salary)/2;
+
+            document.getElementById("avg").innerText="Avg salary: "+avg;
+         </script>
+</body>
+</html>

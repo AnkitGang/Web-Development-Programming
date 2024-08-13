@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    table, th, td {
+  border:1px solid black;
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+}
+
+</style>
+
+<body>
+
+    <table id="tab">
+        <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Id</th>
+            <th>Type</th>
+        </tr>
+    </table>
+
+    <h2>Average Salary of Developers -</h2>
+    <h2 id="avg">--</h2>
+
+
+</body>
+
+<script>
+
+    let table = document.getElementById("tab");
+
+    var developer1 = {
+
+        name: "Om",
+        dob: "19/10/1998",
+        id: 2233,
+        type: "Developer",
+        salary: 40000
+    };
+
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3 );
+    cell1.innerHTML = developer1.name;
+    cell2.innerHTML = developer1.dob;
+    cell3.innerHTML = developer1.id;
+    cell4.innerHTML = developer1.type;
+
+    var developer2 = {
+
+        name: "Aman",
+        dob: "16/11/2000",
+        id: 2277,
+        type: "Developer",
+        salary: 70000
+
+    };
+
+    row = table.insertRow(1);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell3 = row.insertCell(2);
+    cell4 = row.insertCell(3);
+    cell1.innerHTML = developer2.name;
+    cell2.innerHTML = developer2.dob;
+    cell3.innerHTML = developer2.id;
+    cell4.innerHTML = developer2.type;
+
+    let admin = {
+
+        name: "Kshitij",
+        dob: "17/03/1996",
+        id: 2256,
+        type: "Admin",
+        calculateAverageSalDev: function(){
+            return ((developer1.salary + developer2.salary)/2);
+        }
+    };
+
+    row = table.insertRow(1);
+    cell1 = row.insertCell(0);
+    cell2 = row.insertCell(1);
+    cell3 = row.insertCell(2);
+    cell4 = row.insertCell(3);
+    cell1.innerHTML = admin.name;
+    cell2.innerHTML = admin.dob;
+    cell3.innerHTML = admin.id;
+    cell4.innerHTML = admin.type;
+
+    document.getElementById("avg").innerHTML= admin.calculateAverageSalDev();
+
+
+</script>
+
+</html>
